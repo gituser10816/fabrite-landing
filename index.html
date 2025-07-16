@@ -35,13 +35,15 @@
 
     /* HEADER */
     #header {
-      position: absolute; top: 0; left: 0; width: 100%;
-      padding: 1rem 1.5rem; display: flex;
-      justify-content: space-between; align-items: center;
+      position: absolute; top: 1rem; left: 1rem; right: 1rem;
+      display: flex; justify-content: space-between; align-items: center;
       z-index: 10;
     }
-    #header .logo { height: 40px; }
-    #header .menu-toggle {
+    .logo-wrapper {
+      background: #fff; padding: 0.5rem; border-radius: 4px;
+    }
+    .logo { height: 40px; display: block; }
+    .menu-toggle {
       background: none; border: none; font-size: 1.5rem; color: #fff;
     }
 
@@ -54,15 +56,17 @@
     .hero-content h1 {
       font-size: calc(1.5rem + 2vw); font-weight: 900; margin-bottom: 1rem;
     }
-    .hero-features { list-style: none; margin: 1.5rem 0; padding: 0; }
+    .hero-features {
+      margin: 1.5rem 0; padding: 0;
+    }
     .hero-features li {
-      display: flex; align-items: center; margin-bottom: .75rem;
+      display: flex; align-items: center; font-size: 1rem; margin-bottom: .75rem;
     }
     .hero-features li::before {
-      content: "✓"; color: #4ade80; margin-right: .5rem;
+      content: "✔"; color: #22c55e; font-size: 1.25rem; margin-right: .5rem;
     }
     .phone-text {
-      margin-top: 1rem; font-size: .9rem;
+      margin-top: 1rem; font-size: .9rem; color: #e0e0e0;
     }
     .phone-text a { color: #fff; text-decoration: underline; }
 
@@ -72,44 +76,37 @@
     }
 
     /* BUILT FOR DEMANDS */
-    #built {
-      background: #fff; text-align: center; padding: 3rem 1rem;
-    }
+    #built { background: #fff; text-align: center; padding: 3rem 1rem; }
     .built-tagline {
-      color: #22c55e; font-size: .875rem;
-      font-weight: 600; text-transform: uppercase;
-      margin-bottom: .5rem;
+      color: #22c55e; text-transform: uppercase; font-style: italic;
+      font-size: .875rem; margin-bottom: .5rem;
     }
     .built-heading {
-      font-size: 1.5rem; font-weight: 700;
-      margin-bottom: 1.5rem;
+      font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;
     }
     .built-list {
-      display: flex; flex-wrap: wrap;
-      justify-content: center; gap: 1rem;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
       margin-bottom: 1rem;
     }
     .built-list li {
-      display: flex; align-items: center; gap: .5rem;
-      font-size: 1rem;
+      display: flex; align-items: center; gap: .5rem; font-size: 1rem;
     }
     #trusted {
-      font-size: .875rem; color: #555;
+      font-size: .875rem; color: #555; font-style: italic;
     }
 
     /* WHY CHOOSE FABRITE */
     #why {
-      background: #22c55e; color: #fff; padding: 4rem 1rem;
-      text-align: center;
+      background: #22c55e; color: #fff; padding: 4rem 1rem; text-align: center;
     }
     #why h2 { font-size: 2rem; margin-bottom: 1rem; }
     #why p { font-size: 1rem; margin-bottom: 2rem; }
-    .why-list { list-style: none; max-width: 700px; margin: 0 auto; padding: 0; }
+    .why-list { max-width: 700px; margin: 0 auto; padding: 0; }
     .why-list li {
       display: flex; align-items: flex-start; margin-bottom: 1.25rem;
     }
     .why-list li::before {
-      content: "✓"; color: #fff; margin-right: .5rem; margin-top: .1rem;
+      content: "✔"; color: #fff; margin-right: .5rem; margin-top: .1rem;
     }
     .why-list strong { display: block; margin-bottom: .25rem; }
 
@@ -118,34 +115,31 @@
       #why h2 { font-size: 1.6rem; }
     }
 
-    /* CONTACT (DETAILS & FORM) */
+    /* CONTACT DETAILS & FORM */
     #contact-section {
       background: #fff; padding: 4rem 1rem; text-align: center;
     }
-    #contact-section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; }
+    #contact-section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; color: #111; }
     .contact-details {
-      display: flex; flex-wrap: wrap;
-      justify-content: center; gap: 2rem;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
       margin-bottom: 2rem;
     }
     .contact-detail {
-      display: flex; align-items: center; gap: .5rem;
-      font-size: .95rem;
+      display: flex; align-items: center; gap: .5rem; font-size: .95rem;
     }
     .contact-detail .icon { color: #22c55e; font-size: 1.25rem; }
 
     .contact-form { max-width: 500px; margin: 0 auto; text-align: left; }
-    .contact-form .form-field { margin-bottom: 1.25rem; }
-    .contact-form label { display: block; font-weight: 600; margin-bottom: .25rem; }
-    .contact-form input,
-    .contact-form textarea {
+    .form-field { margin-bottom: 1.25rem; }
+    .form-field label { display: block; font-weight: 600; margin-bottom: .25rem; }
+    .form-field input,
+    .form-field textarea {
       width: 100%; padding: .75rem; border: 1px solid #ccc;
       border-radius: 4px; font-size: 1rem;
     }
     .contact-form button {
       width: 100%; background: #22c55e; color: #fff;
-      padding: .75rem; font-weight: 700; border: none;
-      border-radius: 6px; font-size: 1rem;
+      padding: .75rem; font-weight: 700; border: none; border-radius: 6px;
     }
 
     /* GALLERY CTA */
@@ -153,13 +147,13 @@
       background: #f9fafb; text-align: center; padding: 3rem 1rem;
     }
     .gallery-cta {
-      text-transform: uppercase; color: #22c55e;
-      font-size: .875rem; margin-bottom: 1rem;
+      text-transform: uppercase; font-style: italic;
+      color: #22c55e; font-size: .875rem; margin-bottom: 1rem;
     }
     .gallery-button {
       background: #22c55e; color: #fff; padding: .75rem 1.5rem;
       border: none; border-radius: 6px; font-weight: 700;
-      display: inline-block; margin-bottom: 1.5rem;
+      text-transform: uppercase; display: inline-block; margin-bottom: 1.5rem;
     }
     .gallery-image {
       max-width: 100%; height: auto; border-radius: 6px;
@@ -170,8 +164,10 @@
       background: #0e1a0f; color: #fff; text-align: center;
       padding: 2rem 1rem; font-size: .875rem;
     }
-    .footer-logo { font-weight: 700; font-size: 1rem; margin-bottom: .5rem; }
-    footer nav { margin-bottom: .75rem; }
+    .footer-logo {
+      text-transform: uppercase; letter-spacing: 1px;
+      font-size: 1.125rem; margin-bottom: .5rem;
+    }
     footer nav a {
       color: #fff; margin: 0 .5rem; font-size: .875rem;
     }
@@ -195,7 +191,9 @@
   <!-- HERO + HEADER -->
   <section id="hero">
     <div id="header">
-      <img src="logo.png" alt="Fabrite logo" class="logo" />
+      <div class="logo-wrapper">
+        <img src="logo.png" alt="Fabrite logo" class="logo" />
+      </div>
       <button class="menu-toggle">☰</button>
     </div>
     <div class="container hero-content">
@@ -234,9 +232,7 @@
   <section id="why">
     <div class="container">
       <h2>Why Builders & HVAC Pros Choose Fabrite</h2>
-      <p>
-        We don’t just make metal — we solve job site problems with precision, speed, and trust.
-      </p>
+      <p>We don’t just make metal — we solve job site problems with precision, speed, and trust.</p>
       <ul class="why-list">
         <li>
           <strong>Code‑Compliant Every Time</strong>
@@ -316,7 +312,7 @@
   <section id="gallery">
     <div class="container">
       <div class="gallery-cta">SEE OUR WORK IN ACTION</div>
-      <a href="/gallery" class="gallery-button">View Full Project Gallery →</a>
+      <a href="/gallery" class="gallery-button">VIEW FULL PROJECT GALLERY →</a>
       <img src="project.jpg" alt="Project example" class="gallery-image" />
     </div>
   </section>
