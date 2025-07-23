@@ -1,0 +1,154 @@
+
+:root {
+  --green: #22c55e;
+  --bright-green: rgba(50,171,38,1);
+  --dark: #0e1a0f;
+  --light: #f9fafb;
+  --text: #111;
+  --accent: #fff;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--accent);
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+
+header {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.logo {
+  background: var(--accent);
+  padding: 0.5rem;
+  border-radius: 4px;
+  height: 80px;
+  max-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 64px;
+  }
+}
+
+.hero {
+  background: var(--bright-green);
+  color: var(--accent);
+  text-align: left;
+  padding: 8rem 1rem 6rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+}
+
+.hero li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero li::before {
+  content: "✅";
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  margin-bottom: 1rem;
+}
+
+.btn-primary:hover {
+  background: #222;
+}
+
+.subtext {
+  font-size: .95rem;
+  color: #eaffea;
+}
+
+.subtext a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact-section {
+  background: #f1f5f9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .875rem;
+}

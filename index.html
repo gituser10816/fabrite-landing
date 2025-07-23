@@ -2,336 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fabrite Dryer Vent Systems</title>
-  <style>
-    /* RESET & BASE */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: sans-serif; line-height: 1.5; color: #111; }
-    a { text-decoration: none; }
-    ul, ol { list-style: none; }
-
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-
-    .btn-primary, .btn-secondary {
-      display: inline-block; font-weight: 700;
-      padding: 0.75rem 1.5rem; border-radius: 6px;
-      transition: all .3s ease; margin: .5rem .25rem;
-    }
-    .btn-primary {
-      background: #22c55e; color: #fff; border: none;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    .btn-primary:hover {
-      background: transparent; color: #22c55e; border: 2px solid #22c55e;
-    }
-    .btn-secondary {
-      background: transparent; color: #fff; border: 2px solid #fff;
-    }
-    .btn-secondary:hover {
-      background: #fff; color: #0e1a0f;
-    }
-    @keyframes pulse { 0%,100%{transform:scale(1);}50%{transform:scale(1.05);} }
-
-    /* HEADER */
-    #header {
-      position: absolute; top: 1rem; left: 1rem; right: 1rem;
-      display: flex; justify-content: space-between; align-items: center;
-      z-index: 10;
-    }
-    .logo-wrapper {
-      background: #fff; padding: 0.5rem; border-radius: 4px;
-    }
-    .logo { height: 40px; display: block; }
-    .menu-toggle {
-      background: none; border: none; font-size: 1.5rem; color: #fff;
-    }
-
-    /* HERO */
-    #hero {
-      background: #0e1a0f; color: #fff; text-align: center;
-      padding: 6rem 1rem 4rem; position: relative;
-    }
-    .hero-content { margin-top: 2rem; }
-    .hero-content h1 {
-      font-size: calc(1.5rem + 2vw); font-weight: 900; margin-bottom: 1rem;
-    }
-    .hero-features {
-      margin: 1.5rem 0; padding: 0;
-    }
-    .hero-features li {
-      display: flex; align-items: center; font-size: 1rem; margin-bottom: .75rem;
-    }
-    .hero-features li::before {
-      content: "✔"; color: #22c55e; font-size: 1.25rem; margin-right: .5rem;
-    }
-    .phone-text {
-      margin-top: 1rem; font-size: .9rem; color: #e0e0e0;
-    }
-    .phone-text a { color: #fff; text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      #hero { padding: 5rem 1rem 2rem; }
-      .hero-content h1 { font-size: calc(1.25rem + 3vw); }
-    }
-
-    /* BUILT FOR DEMANDS */
-    #built { background: #fff; text-align: center; padding: 3rem 1rem; }
-    .built-tagline {
-      color: #22c55e; text-transform: uppercase; font-style: italic;
-      font-size: .875rem; margin-bottom: .5rem;
-    }
-    .built-heading {
-      font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem;
-    }
-    .built-list {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .built-list li {
-      display: flex; align-items: center; gap: .5rem; font-size: 1rem;
-    }
-    #trusted {
-      font-size: .875rem; color: #555; font-style: italic;
-    }
-
-    /* WHY CHOOSE FABRITE */
-    #why {
-      background: #22c55e; color: #fff; padding: 4rem 1rem; text-align: center;
-    }
-    #why h2 { font-size: 2rem; margin-bottom: 1rem; }
-    #why p { font-size: 1rem; margin-bottom: 2rem; }
-    .why-list { max-width: 700px; margin: 0 auto; padding: 0; }
-    .why-list li {
-      display: flex; align-items: flex-start; margin-bottom: 1.25rem;
-    }
-    .why-list li::before {
-      content: "✔"; color: #fff; margin-right: .5rem; margin-top: .1rem;
-    }
-    .why-list strong { display: block; margin-bottom: .25rem; }
-
-    @media (max-width: 768px) {
-      #why { padding: 3rem 1rem; }
-      #why h2 { font-size: 1.6rem; }
-    }
-
-    /* CONTACT DETAILS & FORM */
-    #contact-section {
-      background: #fff; padding: 4rem 1rem; text-align: center;
-    }
-    #contact-section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; color: #111; }
-    .contact-details {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .contact-detail {
-      display: flex; align-items: center; gap: .5rem; font-size: .95rem;
-    }
-    .contact-detail .icon { color: #22c55e; font-size: 1.25rem; }
-
-    .contact-form { max-width: 500px; margin: 0 auto; text-align: left; }
-    .form-field { margin-bottom: 1.25rem; }
-    .form-field label { display: block; font-weight: 600; margin-bottom: .25rem; }
-    .form-field input,
-    .form-field textarea {
-      width: 100%; padding: .75rem; border: 1px solid #ccc;
-      border-radius: 4px; font-size: 1rem;
-    }
-    .contact-form button {
-      width: 100%; background: #22c55e; color: #fff;
-      padding: .75rem; font-weight: 700; border: none; border-radius: 6px;
-    }
-
-    /* GALLERY CTA */
-    #gallery {
-      background: #f9fafb; text-align: center; padding: 3rem 1rem;
-    }
-    .gallery-cta {
-      text-transform: uppercase; font-style: italic;
-      color: #22c55e; font-size: .875rem; margin-bottom: 1rem;
-    }
-    .gallery-button {
-      background: #22c55e; color: #fff; padding: .75rem 1.5rem;
-      border: none; border-radius: 6px; font-weight: 700;
-      text-transform: uppercase; display: inline-block; margin-bottom: 1.5rem;
-    }
-    .gallery-image {
-      max-width: 100%; height: auto; border-radius: 6px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #0e1a0f; color: #fff; text-align: center;
-      padding: 2rem 1rem; font-size: .875rem;
-    }
-    .footer-logo {
-      text-transform: uppercase; letter-spacing: 1px;
-      font-size: 1.125rem; margin-bottom: .5rem;
-    }
-    footer nav a {
-      color: #fff; margin: 0 .5rem; font-size: .875rem;
-    }
-    .web-by { font-size: .75rem; color: #ccc; }
-
-    /* STICKY MOBILE CTA */
-    .mobile-cta-sticky {
-      position: fixed; bottom: 0; left: 0; width: 100%;
-      background: #22c55e; text-align: center; z-index: 999;
-    }
-    .mobile-cta-sticky a {
-      display: block; padding: 1rem; color: #fff; font-weight: 700;
-    }
-    @media (min-width: 769px) {
-      .mobile-cta-sticky { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <img src="assets/logo.svg" alt="Fabrite logo" class="logo" />
+    <div style="color:#fff; font-size:2rem;">☰</div>
+  </header>
 
-  <!-- HERO + HEADER -->
-  <section id="hero">
-    <div id="header">
-      <div class="logo-wrapper">
-        <img src="logo.png" alt="Fabrite logo" class="logo" />
-      </div>
-      <button class="menu-toggle">☰</button>
-    </div>
-    <div class="container hero-content">
-      <h1>Custom Dryer Vents for Housing Authorities,<br />Builders & HVAC Pros</h1>
-      <ul class="hero-features">
+  <section class="hero">
+    <div class="container fade-in">
+      <h1>Custom Dryer Vents for Housing Authorities, Builders &amp; HVAC Pros</h1>
+      <ul>
         <li>Built to code</li>
         <li>Lifetime guarantee</li>
-        <li>Ships in 3 days</li>
+        <li>Ships in 5 days</li>
       </ul>
-      <a href="#contact-section" class="btn-primary">Get a Custom Quote →</a>
-      <p class="phone-text">
-        Or call <a href="tel:+15734711132">(573) 471‑1132</a> — no wait, no obligation.
-      </p>
+      <a class="btn-primary pulse" href="#contact">[ GET A CUSTOM QUOTE → ]</a>
+      <div class="subtext">Or call <a href="tel:+15734711132">(573) 471‑1132</a> — no wait, no obligation.</div>
     </div>
   </section>
 
-  <!-- BUILT FOR DEMANDS -->
-  <section id="built">
-    <div class="container">
-      <div class="built-tagline">Built for the Demands of Real‑World Projects</div>
-      <div class="built-heading">
-        We fabricate dryer vent systems for contractors and teams working in:
-      </div>
-      <ul class="built-list">
-        <li><span class="icon">🏢</span> Apartment Complexes</li>
-        <li><span class="icon">🏠</span> Modular & Prefab Homes</li>
-        <li><span class="icon">🏛️</span> Government & Housing Authorities</li>
-        <li><span class="icon">❄️</span> HVAC Contractors & Mechanical Installers</li>
-        <li><span class="icon">🔨</span> New Construction Builders & Renovators</li>
-      </ul>
-      <div id="trusted">— Trusted by 200+ Midwest contractors —</div>
-    </div>
+  <section class="contact-section" id="contact">
+    <h2>Let’s Discuss Your Project</h2>
+    <form data-netlify="true" method="POST" name="contact">
+      <label>Name *</label>
+      <input name="name" required type="text"/>
+      <label>Email *</label>
+      <input name="email" required type="email"/>
+      <label>Phone</label>
+      <input name="phone" type="tel"/>
+      <label>Message / Project Description *</label>
+      <textarea name="message" required rows="4"></textarea>
+      <button class="btn-primary pulse" type="submit">Submit</button>
+    </form>
   </section>
 
-  <!-- WHY CHOOSE FABRITE -->
-  <section id="why">
-    <div class="container">
-      <h2>Why Builders & HVAC Pros Choose Fabrite</h2>
-      <p>We don’t just make metal — we solve job site problems with precision, speed, and trust.</p>
-      <ul class="why-list">
-        <li>
-          <strong>Code‑Compliant Every Time</strong>
-          Our dryer vent systems meet local and national code requirements, so you avoid costly rework.
-        </li>
-        <li>
-          <strong>Fast Turnaround — 3 Days or Less</strong>
-          Time is money. We ship most custom jobs within 72 hours.
-        </li>
-        <li>
-          <strong>Lifetime Guarantee</strong>
-          If it fails due to materials or process, we make it right. Period.
-        </li>
-        <li>
-          <strong>No‑Nonsense Support</strong>
-          Call or email us — you’ll talk to a real person who understands fabrication.
-        </li>
-        <li>
-          <strong>Bulk Order Friendly</strong>
-          We handle high‑volume runs and repeat orders without delays or quality drop‑offs.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CONTACT DETAILS & FORM -->
-  <section id="contact-section">
-    <div class="container">
-      <h2>Let’s Discuss Your Project</h2>
-      <div class="contact-details">
-        <div class="contact-detail">
-          <span class="icon">📞</span>
-          <a href="tel:+15734711132">(573) 471‑1132</a>
-        </div>
-        <div class="contact-detail">
-          <span class="icon">📍</span>
-          1635 E Malone Ave, Sikeston, MO 63801 US
-        </div>
-        <div class="contact-detail">
-          <span class="icon">⏰</span>
-          <div>Mon  6:00 am – 4:30 pm</div>
-          <div>Tue  6:00 am – 4:30 pm</div>
-          <div>Wed  6:00 am – 4:30 pm</div>
-          <div>Thu  6:00 am – 4:30 pm</div>
-          <div>Fri  6:00 am – 4:30 pm</div>
-        </div>
-      </div>
-      <div class="contact-form">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display:none">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-          <div class="form-field">
-            <label>Name *</label>
-            <input type="text" name="name" required />
-          </div>
-          <div class="form-field">
-            <label>Email *</label>
-            <input type="email" name="email" required />
-          </div>
-          <div class="form-field">
-            <label>Phone</label>
-            <input type="tel" name="phone" />
-          </div>
-          <div class="form-field">
-            <label>Message / Project Description *</label>
-            <textarea name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY CTA -->
-  <section id="gallery">
-    <div class="container">
-      <div class="gallery-cta">SEE OUR WORK IN ACTION</div>
-      <a href="/gallery" class="gallery-button">VIEW FULL PROJECT GALLERY →</a>
-      <img src="project.jpg" alt="Project example" class="gallery-image" />
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">FABRITE METAL WORKS</div>
-    <nav>
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/">Home</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <div class="web-by">Web design by B12</div>
+    <div>© 2025 Fabrite Metal Works</div>
   </footer>
-
-  <!-- MOBILE STICKY CTA -->
-  <div class="mobile-cta-sticky">
-    <a href="#contact-section">Get a Custom Quote →</a>
-  </div>
 </body>
 </html>
